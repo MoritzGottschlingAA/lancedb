@@ -42,6 +42,9 @@ pyo3-build-config = { version = "0.20.3", features = [
 [build]
 rustflags = ["-C", "target-feature=-sse4.2,-avx,-avx2"]
 
+[package.metadata.maturin]
+rustflags = ["-C", "target-feature=-avx,-avx2"]
+
 [features]
 default = ["remote"]
 fp16kernels = ["lancedb/fp16kernels"]
